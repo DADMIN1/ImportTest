@@ -1,6 +1,7 @@
 # sub/C.py
+# this import statement would normally fail when importing C into A
 from B import PrintB
-# import B.PrintB
+
 
 def PrintC():
     print("PrintC")

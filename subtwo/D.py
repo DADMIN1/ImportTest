@@ -1,6 +1,6 @@
 # subtwo/D.py
 
-print("importing from /subtwo/D.py")
+print("importing 'update_importpaths' from /subtwo/D.py")
 # if this fails, you need to run update_importpaths to create the symlink
 import update_importpaths
 
