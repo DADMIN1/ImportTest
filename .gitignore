@@ -1,4 +1,7 @@
 .venv
 .idea
 .vscode
-
+**/__pycache__
+# ignoring any symlinks
+*/update_importpaths.py
+subthree/
