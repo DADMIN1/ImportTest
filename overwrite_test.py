@@ -25,7 +25,11 @@ def ClearTestdir():
 def SetupTestdir(nonsymlink=False, createbroken=False):
     print("\n Resetting testdir... \n")
     ClearTestdir()
-    # testdir must be recreated before calling CreateSymLinks
+    assert testdir.exists(), "testdir needs to be recreated"
+    deeper = testdir / "deeper"
+    deepest = deeper / "deepest"
+    deeper.mkdir()
+    deepest.mkdir()
     if nonsymlink:
         nonsymlink_file = testdir / "update_importpaths.py"
         nonsymlink_file.write_text("this file is not a symlink!\n")
